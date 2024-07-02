@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Blog_Posts::menu" title="BloG" translate="title" module="Blog_Posts" sortOrder="10" resource="Blog_Posts::menu"/>
+        <!-- START: new node -->  
+        <add id="Blog_Posts::submenu_posts"
+            title="Posts" translate="title" module="Blog_Posts"
+            sortOrder="20" parent="Blog_Posts::menu"
+            action="posts/create/index"
+            resource="Blog_Posts::submenu_posts"
+            />
+        <!-- END:   new node -->
+    </menu>
+</config>
